@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap");
+body {
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  overflow-x: scroll;
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar-brand {
+  color: #696969;
+  font-weight: 700;
+}
+
+.navbar-brand a {
+  color: #7fbb01;
+}
+
+.navbar-brand:hover {
+  color: #7fbb01;
+}
+
+.btn-primary {
+  margin: 40px auto;
+  background: linear-gradient(176deg, #020024 0%, #7fbb01 0%, #646464 100%);
+  border-color: transparent;
+  font-weight: 700;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  display: table;
+}
+
+.btn-primary:hover {
+  color: #696969;
+  background: whitesmoke;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  border-color: #7fbb01;
+}
+
+.container h3 {
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+.container .demo {
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 32px;
+  color: #7fbb01;
+}
+
+.inp {
+  position: relative;
+  margin: auto;
+  width: 100%;
+}
+
+.inp .label {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  font-size: 16px;
+  color: #9098a9;
+  font-weight: 500;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.inp .border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #07f;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+.inp input {
+  -webkit-appearance: none;
+  width: 100%;
+  border: 0;
+  font-family: inherit;
+  padding: 12px 12px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid #c8ccd4;
+  background: none;
+  border-radius: 0;
+  color: #223254;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+.inp input:hover {
+  background: rgba(34, 50, 84, 0.03);
+}
+
+.inp input:not(:placeholder-shown) + span {
+  color: #5a667f;
+  -webkit-transform: translateY(-26px) scale(0.75);
+          transform: translateY(-26px) scale(0.75);
+}
+
+.inp input:focus {
+  background: none;
+  outline: none;
+}
+
+.inp input:focus + span {
+  color: #07f;
+  -webkit-transform: translateY(-26px) scale(0.75);
+          transform: translateY(-26px) scale(0.75);
+}
+
+.inp input:focus + span + .border {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+/*# sourceMappingURL=style.css.map */

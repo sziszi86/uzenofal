@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Salamon Szilárd - Üzenőfal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Salamon Szilárd próbamunka</a>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+        <h2>Üzenőfal</h2>
+        <hr>
+      <div id="post">
+        <form role="form" class="row">
+          <div class="col-md-4">
+              <label for="name" class="inp">
+                <input type="text" class="form-control" id="name" placeholder="&nbsp;"/>
+                <span class="label">Név</span>
+                <span class="border"></span>
+            </label>
+          </div>
+          <div class="col-md-8">
+            <label for="message" class="inp">
+              <input type="text" class="form-control" id="message" placeholder="&nbsp;"/>
+              <span class="label">Üzenet</span>
+              <span class="border"></span>
+            </label>
+          </div>
+          <button class="btn btn-primary" v-on="click: sendPosts">Posztolok</button>
+        </form>
+        <div class="container">
+            <h3>Tárolt üzenetek száma: </h3> <div id="demo" class="demo"></div>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+            Üzenetek megtekintése modal boxban
+          </button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Összes üzenet</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Név</th>
+                            <th>Üzenet</th>
+                            <th>Mikor</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr v-repeat="posts">
+                            <td>{{name}}</td>
+                            <td>{{message}}</td>
+                            <td>{{datum}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Bezárom</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/0.10.5/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
